@@ -64,7 +64,6 @@ def parse(String description) {
     log.debug "description is $description"
     def event = zigbee.getEvent(description)
     if (event) {
-        log.debug "getEvent is $event"
         sendEvent(event)
     }
     else {
