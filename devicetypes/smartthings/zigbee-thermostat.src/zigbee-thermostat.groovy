@@ -290,7 +290,8 @@ def installed() {
 
 def refresh() {
 	// THERMOSTAT_SYSTEM_CONFIG is an optional attribute. It we add other thermostats we need to determine if they support this and behave accordingly.
-	return zigbee.readAttribute(THERMOSTAT_CLUSTER, THERMOSTAT_SYSTEM_CONFIG) +
+	return // zigbee.readAttribute(THERMOSTAT_CLUSTER, THERMOSTAT_SYSTEM_CONFIG) +
+            zigbee.readAttribute(THERMOSTAT_CLUSTER, CONTROL_SEQUENCE_OF_OPERATION) +
 			zigbee.readAttribute(FAN_CONTROL_CLUSTER, FAN_MODE_SEQUENCE) +
 			zigbee.readAttribute(THERMOSTAT_CLUSTER, LOCAL_TEMPERATURE) +
 			zigbee.readAttribute(THERMOSTAT_CLUSTER, COOLING_SETPOINT) +
